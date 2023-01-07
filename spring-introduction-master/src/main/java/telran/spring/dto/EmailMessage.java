@@ -1,5 +1,10 @@
 package telran.spring.dto;
 
+import jakarta.validation.constraints.Email;
+import jakarta.validation.constraints.NotEmpty;
+
 public class EmailMessage extends Message {
-public String emailAddress;
+	@Email
+	@NotEmpty
+	public String emailAddress;
 }

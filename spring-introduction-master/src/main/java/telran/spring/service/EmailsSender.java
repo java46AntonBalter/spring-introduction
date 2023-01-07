@@ -10,10 +10,17 @@ public class EmailsSender implements Sender {
 
 	@Override
 	public String send(Message message) {
-		EmailMessage emailMessage = (EmailMessage) message;
+		String res = "";
+		EmailMessage emailMessage;
+		try {
+			emailMessage = (EmailMessage) message;
+			res = String.format("email sender text '%s' has been sent to %s\n", emailMessage.text,
+					emailMessage.emailAddress);
+		} catch (Exception e) {
+			res = "Message Data mismatch sender type";
+		}
 
-		return String.format("email sender text '%s' has been sent to %s\n", emailMessage.text,
-				emailMessage.emailAddress);
+		return res;
 
 	}
 
