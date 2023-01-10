@@ -8,7 +8,7 @@ import org.springframework.stereotype.Service;
 import telran.spring.calculator.dto.DatesOperationData;
 import telran.spring.calculator.dto.OperationData;
 @Service
-public class DatesBetweenOperation extends AbstractOperation {
+public class DatesBetweenOperation implements Operation {
 	
 	@Override
 	public String execute(OperationData data) {
@@ -27,7 +27,9 @@ public class DatesBetweenOperation extends AbstractOperation {
 
 	@Override
 	public String getOperationName() {
+		
 		return "dates-between";
 	}
 
+	
 }

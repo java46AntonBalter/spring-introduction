@@ -7,7 +7,7 @@ import org.springframework.stereotype.Service;
 import telran.spring.calculator.dto.DateDaysOperationData;
 import telran.spring.calculator.dto.OperationData;
 @Service
-public class DatesSimpleOperation extends AbstractOperation {
+public class DatesSimpleOperation implements Operation {
 	
 	@Override
 	public String execute(OperationData data) {
@@ -32,8 +32,10 @@ public class DatesSimpleOperation extends AbstractOperation {
 
 	@Override
 	public String getOperationName() {
-
+		
 		return "dates-simple";
 	}
+
+	
 
 }

@@ -8,7 +8,7 @@ import org.springframework.stereotype.Service;
 
 import telran.spring.calculator.dto.*;
 @Service
-public class ArithmeticSimpleOperation extends AbstractOperation {
+public class ArithmeticSimpleOperation implements Operation {
 private static Map<String, BiFunction<Double, Double, String>> operations;
 @Value("${app.message.wrong.operation.arithmetic}")
 String wrongOperation;
@@ -36,8 +36,8 @@ static {
 	}
 	@Override
 	public String getOperationName() {
-		
 		return "arithmetic-simple";
 	}
+	
 
 }
