@@ -1,10 +1,10 @@
 package telran.spring;
 
 import org.junit.jupiter.api.Test;
-import org.springframework.boot.test.context.SpringBootTest;
+import org.springframework.boot.test.autoconfigure.web.servlet.WebMvcTest;
 
-@SpringBootTest
-class SpringArchitectureApplicationTests {
+@WebMvcTest
+class MessageSenderTest {
 
 	@Test
 	void contextLoads() {
